@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Click To Call ads!</title>
+        <title>Ahoy hoy!</title>
         <link href="/static/bootstrap.css" rel="stylesheet">
         <link href="/static/bootflat/css/bootflat.css" rel="stylesheet">
-        <script type="text/javascript" src="//static.twilio.com/libs/twiliojs/1.1/twilio.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="//static.twilio.com/libs/twiliojs/1.1/twilio.min.js"></script>
+        <script src="/static/bootstrap.js"></script>
+        <style type="text/css">
+            .center {
+                text-align: center;
+            }
+
+            .red {
+                color: #DA4453;
+            }
+
+            .blue {
+                color: #4A89DC;
+            }
+        </style>
     </head>
 
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h1>Ahoy hoy!</h1>
+                <div class="col-md-6">
+                    <h1 class="red">My fancy webpage</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="center blue">Click an ad to purchase now!</h4>
+                    <div class="list-group">
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">That's a fancy sofa</h4>
+                        <p class="center list-group-item-text"><img src="/static/img/sofa.jpg"></p>
+                      </a>
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">What a lovely receptacle</h4>
+                        <p class="center list-group-item-text"><img src="/static/img/jug.jpg"></p>
+                      </a>
+                      <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">I want that owl!</h4>
+                        <p class="center list-group-item-text"><img src="/static/img/owl.jpg"></p>
+                      </a>
+                    </div>
                 </div>
             </div>
         </div>
