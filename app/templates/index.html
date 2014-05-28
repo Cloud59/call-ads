@@ -4,7 +4,7 @@
         <title>Ahoy hoy!</title>
         <link href="/static/bootstrap.css" rel="stylesheet">
         <link href="/static/bootflat/css/bootflat.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="//static.twilio.com/libs/twiliojs/1.1/twilio.min.js"></script>
         <script src="/static/bootstrap.js"></script>
         <style type="text/css">
@@ -55,7 +55,7 @@
       Twilio.Device.setup("{{ token }}");
 
       function call(item_of_choice) {
-        params = {"item": item_of_choice};
+        params = {"item": item_of_choice, "name": '{{client_name}}'};
         Twilio.Device.connect(params);
       }
 
