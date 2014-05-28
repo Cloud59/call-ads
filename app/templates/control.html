@@ -42,5 +42,20 @@
                 </div>
             </div>
         </div>
+    <script type="text/javascript">
+
+      Twilio.Device.setup("{{ token }}");
+
+      Twilio.Device.incoming(function (conn) {
+        // accept the incoming connection and start two-way audio
+        conn.accept();
+      });
+
+      function hangup() {
+        Twilio.Device.disconnectAll();
+      }
+
+      console.log('{{client_name}}');
+    </script>
     </body>
 </html>

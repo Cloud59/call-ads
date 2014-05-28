@@ -46,6 +46,7 @@
                         <p class="center list-group-item-text"><img src="/static/img/owl.jpg"></p>
                       </a>
                     </div>
+                    <a onClick="hangup();">Hang up</a>
                 </div>
             </div>
         </div>
@@ -61,6 +62,8 @@
       function hangup() {
         Twilio.Device.disconnectAll();
       }
+
+      console.log('{{client_name}}');
     </script>
     </body>
 </html>

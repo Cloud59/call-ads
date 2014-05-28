@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, g
 from twilio.twiml import Response
 from twilio.util import TwilioCapability
 
-caller_id = '+441803506012'
+caller_id = ''
 default_client = 'anonymous'
 
 app = Flask(__name__)
@@ -22,7 +22,6 @@ def build_twilio_token(client_name):
     cap.allow_client_incoming(client_name)
 
     return cap.generate()
-
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -47,15 +46,15 @@ def controller():
 @app.route('/voice/', methods=['GET', 'POST'])
 def generate_voice_twiml():
 
+    extra_data = request.values.get('item', None)
+
     client_name = request.values.get('client', None) or default_client
+
+    print client_name
 
     r = Response()
 
-    with r.dial(callerId=caller_id) as r:
-        r.client(default_client)
-
-    return r.toxml()
-
+    return '<Response><Dial><Client>Admin</Client></Dial></Response>'
 
 if __name__ == '__main__':
     app.run(debug=True)
